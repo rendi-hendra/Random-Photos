@@ -1,81 +1,11 @@
 <!doctype html>
-<html amp lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>Hallo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-    <style amp-boilerplate>
-        body {
-            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            animation: -amp-start 8s steps(1, end) 0s 1 normal both
-        }
-
-        @-webkit-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @-moz-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @-ms-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @-o-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-
-        @keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-
-            to {
-                visibility: visible
-            }
-        }
-    </style><noscript>
-        <style amp-boilerplate>
-            body {
-                -webkit-animation: none;
-                -moz-animation: none;
-                -ms-animation: none;
-                animation: none
-            }
-        </style>
-    </noscript>
 </head>
 
 <body>
@@ -84,60 +14,30 @@
     <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-20 mx-2" id="foto"></div>
 
 
-
-    <!-- <amp-iframe width=600 height=140 src="http://localhost:8080/komentar/12121" layout="responsive"
-        sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable>
-        <div aria-label="Load more" role=button tabindex=0 overflow
-            style="display:block;font-size:12px;font-weight:500;font-family:Helvetica Neue, arial, sans-serif;text-align:center;line-height:1.1;padding:12px 16px;border-radius:4px;background:rgba(29,47,58,0.6);color:rgb(255,255,255)">
-            Load more
-        </div>
-    </amp-iframe> -->
-
-
     <div id="disqus_thread"></div>
-    <script>
-        window.addEventListener('message', receiveMessage, false);
-        function receiveMessage(event) {
-            if (event.data) {
-                var msg;
-                try {
-                    msg = JSON.parse(event.data);
-                } catch (err) {
-                    // Do nothing
-                }
-                if (!msg) {
-                    return false;
-                }
-                if (msg.name === 'resize' || msg.name === 'rendered') {
-                    window.parent.postMessage({
-                        sentinel: 'amp',
-                        type: 'embed-size',
-                        height: msg.data.height
-                    }, '*');
-                }
-            }
-        }
-    </script>
     <script>
         /**
         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-        */
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
         var disqus_config = function () {
-            this.page.url = window.location;
-            this.page.identifier = window.location.hash;
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
-        (function () {  // DON'T EDIT BELOW THIS LINE
+        */
+        (function () { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
-
-            s.src = '//rendi25.disqus.com/embed.js';
-
+            s.src = 'https://rendi25.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
         })();
     </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
 
 
+
+    <script id="dsq-count-scr" src="//rendi25.disqus.com/count.js" async></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
